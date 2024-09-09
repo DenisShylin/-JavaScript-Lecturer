@@ -353,3 +353,142 @@
 // }
 
 // alert("Вартість вашого квитка: " + ticketPrice + " гривень.");
+
+// ----------------------------
+
+// Станція з продажу ремонтних дроїдів готова до запуску,
+// залишилося написати програмне забезпечення для відділу продажів.
+
+// Оголоси функцію makeTransaction, яка очікує два параметри, значення
+// яких будуть задаватися під час її виклику: • quantity— перший параметр,
+// число, що містить кількість замовлених дроїдів • pricePerDroid — другий параметр,
+// число, що містить вартість одного дроїда
+// Доповни код функції так, щоб вона повертала рядок з повідомленням про покупку ремонтних дроїдів:
+// "You ordered <quantity> droids worth <totalPrice> credits!",
+// де: • <quantity> — це кількість замовлених дроїдів • <totalPrice> — це загальна вартість замовлення,
+// тобто вартість усіх замовлених дроїдів
+
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.
+// У консоль будуть виведені результати її роботи.
+
+// function makeTransaction(orderedDroidsCount, pricePerDroid) {
+//   let totalPrice = orderedDroidsCount * pricePerDroid;
+
+//   return `You ordered ${orderedDroidsCount} droids worth ${totalPrice} credits`;
+// }
+
+// console.log(makeTransaction(5, 3000)); // Вы заказали 5 дроидов на сумму 15000 кредитов!
+// console.log(makeTransaction(3, 1000)); // Вы заказали 3 дроидов на сумму 3000 кредитов!
+// console.log(makeTransaction(10, 500)); // Вы заказали 10 дроидов на сумму 5000 кредитов!
+
+// ------------------------
+
+// Оголоси функцію getShippingMessage, яка очікує три параметри, значення яких будуть задаватися під
+// час її виклику: • country — перший параметр, рядок, що містить країну доставки • price — другий параметр,
+// число, що містить загальну вартість товару • deliveryFee — третій параметр, число, що містить вартість доставки товару
+
+// Доповни код функції так, щоб вона повертала рядок з повідомленням про доставку товару в країну користувача:
+// "Shipping to <country> will cost <totalPrice> credits", де: • <country> — це країни доставки •
+// <totalPrice> — це загальна вартість замовлення, що включає вартість товару і його доставки
+
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть
+// виведені результати її роботи.
+
+// function getShippingMessage(country, price, deliveryFee) {
+//   let totalPrice = price + deliveryFee;
+
+//   return `Shipping to ${country} will cost ${totalPrice} credits`;
+// }
+
+// console.log(getShippingMessage("Australia", 120, 50));
+// console.log(getShippingMessage("Germany", 80, 20));
+// console.log(getShippingMessage("Sweden", 100, 20));
+
+// ------------------------
+
+// Оголоси функцію getElementWidth, яка очікує три параметри, значення яких будуть задаватися під
+// час її виклику: • content— перший параметр, ширина контенту • padding — другий параметр, значення
+// горизонтального падінгу для кожної зі сторін • border — третій параметр, значення товщини бордера
+// для кожної зі сторін Значення всіх параметрів будуть рядками формату Npx де N — це довільне число,
+// ціле або дробове.
+
+// Доповни код функції так, щоб вона повертала число —загальну ширину елемента.При розрахунку загальної
+// ширини орієнтуйся на те, що значення box - sizing дорівнює border - box.
+
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.У консоль
+// будуть виведені результати її роботи.
+
+// function getElementWidth(content, padding, border) {
+//   // Перетворюємо рядки типу "Npx" в числа
+//   const contentWidth = parseFloat(content);
+//   const paddingWidth = parseFloat(padding) * 2; // Падінг з обох сторін
+//   const borderWidth = parseFloat(border) * 2; // Бордер з обох сторін
+
+//   // Обчислюємо загальну ширину елемента
+//   const totalWidth = contentWidth + paddingWidth + borderWidth;
+
+//   return totalWidth;
+// }
+
+// console.log(getElementWidth("50px", "8px", "4px"));
+// console.log(getElementWidth("60px", "12px", "8.5px"));
+// console.log(getElementWidth("200px", "0px", "0px"));
+
+// Залиш цей код для перевірки ментором.
+// На що буде звертати увагу ментор при перевірці:
+
+// Оголошена функція getElementWidth(content, padding, border)
+// Виклик getElementWidth("50px", "8px", "4px") повертає число 74
+// Виклик getElementWidth("60px", "12px", "8.5px") повертає число 101
+// Виклик getElementWidth("200px", "0px", "0px") повертає число 200
+// Виклик getElementWidth з будь якими-валідними аргументами повертає правильне значення
+
+// ---------------------------
+
+// Оголоси функцію makePurchase, яка приймає три параметри:
+
+// item — рядок, що містить назву товару (наприклад, "drone" або "robot");
+// quantity — число, що містить кількість замовлених одиниць товару;
+// pricePerItem — число, що містить вартість однієї одиниці товару.
+// Доповни код функції так, щоб вона повертала рядок із повідомленням про покупку:
+// "You bought <quantity> <item>(s) worth <totalPrice> credits!"
+// де:
+
+// <quantity> — це кількість замовленого товару;
+// <item> — назва товару;
+// <totalPrice> — загальна вартість замовлення (кількість * ціна за одиницю товару).
+
+// function makePurchase(item, quantity, pricePerItem) {
+//   let totalPrice = quantity * pricePerItem;
+//   let itemName = quantity > 1 ? `${item}s` : item;
+
+//   return `You bought ${quantity} ${itemName} worth ${totalPrice} credits!`;
+// }
+// console.log(makePurchase("robot", 4, 2500));
+// console.log(makePurchase("drone", 7, 1500));
+// console.log(makePurchase("sensor", 10, 300));
+
+// ---------------------------------------------
+
+// Оголоси функцію calculateTotalCost, яка приймає три параметри:
+
+// productName — рядок, що містить назву продукту (наприклад, "laptop" або "tablet");
+// quantity — число, що вказує на кількість замовлених продуктів;
+// unitPrice — число, що містить вартість одного продукту.
+// Доповни код функції так, щоб вона повертала рядок із повідомленням про покупку:
+// "You ordered <quantity> <productName>(s) with a total cost of <totalCost> credits!"
+// де:
+
+// <quantity> — це кількість замовлених продуктів;
+// <productName> — назва продукту;
+// <totalCost> — загальна вартість замовлення (кількість * ціна за одиницю товару).
+
+function calculateTotalCost(productName, quantity, unitPrice) {
+  let totalCost = quantity * unitPrice; // Виправлення: множення замість додавання
+  let itemName = quantity > 1 ? `${productName}s` : productName;
+
+  return `You ordered ${quantity} ${itemName} with a total cost of ${totalCost} credits!`;
+}
+console.log(calculateTotalCost("laptop", 3, 1500));
+console.log(calculateTotalCost("tablet", 5, 800));
+console.log(calculateTotalCost("phone", 2, 1000));
